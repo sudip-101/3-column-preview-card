@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+    *,
+    *::after,
+    *::before {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 15px;
+      width: 100vw;
+      /* height: 100vh; */
+      background-color: hsl(0, 0%, 95%);
+    }
+
+    main {
+      margin: auto;
+      min-height: 100vh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* padding: 1rem; */
+      /* overflow: hidden; */
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 300px);
+      margin: auto;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .container button {
+      background-color: transparent;
+      border: transparent;
+    }
+
+    .container a {
+      padding: 0.775rem 2rem;
+      background-color: white;
+      border-radius: 50px; 
+    }
+
+    .card-1 a {
+      color: hsl(31, 77%, 52%);
+    }
+
+    .card-2 a {
+      color: hsl(184, 100%, 22%);
+    }
+
+    .card-3 a {
+      color: hsl(179, 100%, 13%);
+    }
+
+    .card-1,
+    .card-2,
+    .card-3 {
+      padding: 3rem;
+    }
+  
+   .container h1 {
+    margin: 2rem 0;
+    font-size: 2.725rem;
+    color: hsl(0, 0%, 95%);
+    letter-spacing: 1px;
+    font-family: 'Big Shoulders Display', cursive;
+   }
+
+   .container p {
+     margin-bottom: 5rem;
+     line-height: 1.5;
+     color: hsla(0, 0%, 100%, 0.75);
+   }
+
+    .card-1 {
+      background-color: hsl(31, 77%, 52%);
+      border-radius: 12px 0 0 12px;
+    }
+
+    .card-2 {
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    .card-3 {
+      background-color: hsl(179, 100%, 13%);
+      border-radius: 0 12px 12px 0;
+    }
+
+    @media screen and (max-width: 912px) {
+      .container {
+        display: grid;
+        /* grid-template-columns: 350px;
+        grid-template-rows: repeat(3, 450px); */
+        grid-template-columns: repeat(3, 225px);
+        grid-template-rows: 350px;
+        /* padding: 1rem 0; */
+        /* height: max-content; */
+        /* margin: auto 4rem; */
+      }
+
+      .container h1 {
+        font-size: 2rem;
+      }
+
+      .container p {
+        font-size: 0.8rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .card-1,
+      .card-2,
+      .card-3 {
+        padding: 1.5rem;
+      }
+
+      /* .card-1 {
+        border-radius: 12px 12px 0 0;
+      }
+
+      .card-3 {
+        border-radius: 0 0 12px 12px;
+      } */
+
+      .attribution {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 693px) {
+      .container {
+        grid-template-columns: 350px;
+        grid-template-rows: repeat(3, 425px);
+        padding: 4rem 0;
+      }
+
+      .container h1 {
+        font-size: 2.725rem;
+        margin: 2rem 0;
+      }
+
+      .container p {
+        font-size: 1.125rem;
+        margin-bottom: 5rem;
+      }
+
+      .card-1,
+      .card-2,
+      .card-3 {
+        padding: 2rem;
+      }
+
+      .card-1 {
+        border-radius: 12px 12px 0 0;
+      }
+
+      .card-3 {
+        border-radius: 0 0 12px 12px;
+      }
+    }
+
+    .attribution { font-size: 16px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="card-1">
+        <img src="./images/icon-sedans.png" alt="">
+        <h1>SEDANS</h1>
+        <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+          or on your next road trip.</p>
+        <button><a href="#">Learn More</a></button>
+      </div>
+      <div class="card-2">
+        <img src="./images/icon-suvs.png" alt="">
+        <h1>SUVS</h1> 
+        <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+          and off-road adventures.</p>
+        <button><a href="#">Learn More</a></button>
+      </div>
+      <div class="card-3">
+        <img src="./images/icon-luxury.png" alt="">
+        <h1>LUXURY</h1>
+        <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+          rental and arrive in style.</p>
+        <button><a href="#">Learn More</a></button>
+      </div>
+    </div>
+  </main>
+  
+  <!-- Sedans
+  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+  or on your next road trip.
+
+  SUVs
+  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+  and off-road adventures.
+
+  Luxury
+  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+  rental and arrive in style. -->
+  
+  <div style="position: fixed; bottom: 0; right: 0; left: 0; text-align: center; z-index: 0;" class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Sudip Maiti</a>.
+  </div>
+</body>
+</html>
